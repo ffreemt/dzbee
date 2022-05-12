@@ -1,0 +1,21 @@
+{
+    "dependencies": {
+        "npm-run-all": "^4.1.5"
+    },
+    "scripts": {
+        "start": "pyright && pytest && yarn style",
+        "test": "nodemon -w tests -w dzbee -x pytest tests",
+        "pyright": "nodemon -w dzbee -w .venv -e .py -x pyright dzbee tests",
+        "pytest": "nodemon -w tests -w dzbee -e .py -x pytest tests dzbee",
+        "style": "nodemon -w dzbee -w tests -x \"black tests dzbee && python -m flake8\"",
+        "docstyle": "nodemon -w dzbee -w tests -x pydocstyle --convention=google tests dzbee",
+        "pylint": "nodemon -w dzbee -e .py -x pylint dzbee",
+        "test:dzbee": "nodemon -w tests -e .py -x pytest -k dzbee tests",
+        "publish": "poetry build && poetry publish",
+        "black": "black tests dzbee",
+        "flake8": "flake8 tests dzbee",
+        "pflake8": "pflake8 tests dzbee",
+        "pep257": "pep257 tests dzbee",
+        "final": "run-s docstyle black flake8 pytest"
+    }
+}
