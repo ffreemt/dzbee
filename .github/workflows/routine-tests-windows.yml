@@ -1,4 +1,4 @@
-name: pytest1
+name: windows-pytest
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
         python-version: [3.8]
         poetry-version: [1.1.2]
         # os: [ubuntu-18.04, macos-latest, windows-latest]
-        os: [ubuntu-18.04, macos-latest, windows-latest]
+        os: [windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -30,15 +30,15 @@ jobs:
             echo "$RUNNER_OS do nothing"
             # exit 0
           elif [ "$RUNNER_OS" == "Windows" ]; then
-            poetry run pip install data\\artifects\\pycld2-0.41-cp38-cp38-win_amd64.whl
-            poetry add git+https://github.com/aboSamoor/polyglot@master
-            poetry run pip install data\\artifects\\PyICU-2.9-cp38-cp38-win_amd64.whl
-            # poetry remove pyicu
+            # poetry run pip install data\\artifects\\pycld2-0.41-cp38-cp38-win_amd64.whl
+            # poetry add git+https://github.com/aboSamoor/polyglot@master
+            # poetry run pip install data\\artifects\\PyICU-2.9-cp38-cp38-win_amd64.whl
+            pip install -r requirements.txt
           else
             echo "$RUNNER_OS do nothing"
             # exit 0
           fi
-          poetry install  # --no-dev
+          # poetry install  # --no-dev
         shell: bash
       - name: Run flake8
         run: |
