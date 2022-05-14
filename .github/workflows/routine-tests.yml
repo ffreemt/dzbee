@@ -10,8 +10,8 @@ jobs:
       matrix:
         python-version: [3.8]
         poetry-version: [1.1.2]
-        os: [ubuntu-18.04, macos-latest, windows-latest]
-        # os: [ubuntu-18.04, macos-latest]
+        # os: [ubuntu-18.04, macos-latest, windows-latest]
+        os: [ubuntu-18.04, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -23,9 +23,9 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: Install packages
         run: |
-          poetry config virtualenvs.create false
-          pip install pycld2 pyicu fasttest
-          poetry install  # --no -dev
+          # poetry config virtualenvs.create false
+          # pip install pycld2 pyicu fasttest
+          poetry install  # --no-dev
       - name: Run flake8
         run: |
           poetry run flake8 --exit-zero
