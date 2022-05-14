@@ -1,4 +1,4 @@
-name: pytest
+name: pytest1
 
 on:
   push:
@@ -27,14 +27,15 @@ jobs:
           # pip install pycld2 pyicu fasttest
           if [ "$RUNNER_OS" == "Linux" ]; then
             # apt install important_linux_software
-            exit 0
+            echo "$RUNNER_OS do nothing"
+            # exit 0
           elif [ "$RUNNER_OS" == "Windows" ]; then
             poetry run pip install data\\artifects\\PyICU-2.8.1-cp38-cp38-win_amd64.whl
             poetry run pip install data\\artifects\\pycld2-0.41-cp38-cp38-win_amd64.whl
             poetry add git+https://github.com/aboSamoor/polyglot@master
           else
-            echo "$RUNNER_OS not supported"
-            exit 0
+            echo "$RUNNER_OS do nothing"
+            # exit 0
           fi
           poetry install  # --no-dev
         shell: bash
