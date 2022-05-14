@@ -9,9 +9,7 @@ Align german(de)-chinese(zh) texts, fast
 *   If your computer **does not** have a C++ compiler,
  search for needed wheels at  https://www.lfd.uci.edu/~gohlke/pythonlibs/ and install, e.g.,
     ```
-     pip install fasttext-0.9.2-cp38-cp38-win_amd64.whl
-     pip install pycld2-0.41-cp38-cp38-win_amd64.whl
-     pip install PyICU-2.8.1-cp38-cp38-win_amd64.whl
+     pip install fasttext-0.9.2-cp38-cp38-win_amd64.whl pycld2-0.41-cp38-cp38-win_amd64.whl PyICU-2.8.1-cp38-cp38-win_amd64.whl
     ```
 *   If your computer *does* have a C++ compiler
     ```
