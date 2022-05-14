@@ -23,7 +23,7 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: Install packages
         run: |
-          poetry config settings.virtualenvs.create false
+          poetry config virtualenvs.create false
           pip install pycld2 pyicu fasttest
           poetry install  # --no-dev
       - name: Run flake8
