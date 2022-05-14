@@ -33,7 +33,8 @@ jobs:
             # poetry run pip install data\\artifects\\pycld2-0.41-cp38-cp38-win_amd64.whl
             # poetry add git+https://github.com/aboSamoor/polyglot@master
             # poetry run pip install data\\artifects\\PyICU-2.9-cp38-cp38-win_amd64.whl
-            pip install -r requirements.txt
+            #
+            poetry run pip install -r requirements.txt
           else
             echo "$RUNNER_OS do nothing"
             # exit 0
