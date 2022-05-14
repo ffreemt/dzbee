@@ -1,6 +1,6 @@
 data\artifects\PyICU-2.9-cp38-cp38-win_amd64.whl
 data\artifects\pycld2-0.41-cp38-cp38-win_amd64.whl
-data\artifects\fasttext-0.9.2-cp38-cp38-win_amd64.whl
+# data\artifects\fasttext-0.9.2-cp38-cp38-win_amd64.whl
 wheel
 git+https://github.com/aboSamoor/polyglot@master
 about-time==3.1.1; python_version >= "3.7" and python_version < "4" and python_full_version >= "3.8.3" and python_full_version < "4.0.0"
