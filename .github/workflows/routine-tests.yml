@@ -25,7 +25,7 @@ jobs:
         run: |
           poetry config settings.virtualenvs.create false
           pip install pycld2 pyicu fasttest
-          poetry install  # --no- dev
+          poetry install  # --no-dev
       - name: Run flake8
         run: |
           poetry run flake8 --exit-zero
