@@ -48,7 +48,7 @@ esp_min_samples_expl = dedent(
 def _version_callback(value: bool) -> None:
     if value:
         typer.echo(
-            f"{app.info.name} v.{__version__} -- visit https://bumblebee.freeforums.net/thread/2/dzbee-cli-related to chat about {app.info.name}."
+            f"{app.info.name} v.{__version__} -- visit https://bumblebee.freeforums.net/thread/4/dzbee-cli-related to chat about {app.info.name}."
         )
         raise typer.Exit()
 
@@ -100,7 +100,7 @@ def main(
         is_eager=True,
     ),
 ):
-    """Align en-zh texts.
+    """Align de-zh texts, fast.
 
     e.g.
 

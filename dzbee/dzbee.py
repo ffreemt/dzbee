@@ -6,7 +6,7 @@ from cmat2aset import cmat2aset  # pylint: disable=import-error
 
 # from dzbee.gen_cmat import gen_cmat  # pylint: disable=import-error
 
-# from json_de2zh.gen_cmat import gen_cmat  # pylint: disable=import-error
+from json_de2zh.gen_cmat import gen_cmat  # pylint: disable=import-error
 # from install import install  # import on-demand
 
 from logzero import logger
@@ -35,7 +35,7 @@ def dzbee(
         raise Exception("Nothing to do...exiting")
 
     try:
-        from json_de2zh.gen_cmat import gen_cmat  # noqa  # pylint: disable=import-outside-toplevel
+        # from json_de2zh.gen_cmat import gen_cmat  # noqa  # pylint: disable=import-outside-toplevel
         cmat = gen_cmat(text1, text2)
         # logger.level is reset to 20 in fastlid
         dzbee.cmat = cmat

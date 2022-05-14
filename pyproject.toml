@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dzbee"
-version = "0.1.1-alpha.0"
+version = "0.1.1-alpha.1"
 description = "pack_name descr "
 authors = ["ffreemt"]
 license = "MIT"
@@ -13,6 +13,13 @@ logzero = "^1.7.0"
 icecream = "^2.1.1"
 install = "^1.3.5"
 aset2pairs = "^0.1.0"
+json-de2zh = "0.1.1-alpha.0"
+cchardet = "^2.1.7"
+Morfessor = "^2.0.6"
+polyglot = "^16.7.4"
+typer = "^0.4.1"
+Jinja2 = "^3.1.2"
+XlsxWriter = "^3.0.3"
 
 [tool.poe.executor]
 type = "poetry"

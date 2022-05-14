@@ -9,7 +9,9 @@ import numpy as np
 
 # from radiobee.lists2cmat import lists2cmat  # use fast_scores
 # from radiobee.detect import detect
-from fast_scores.gen_cmat import gen_cmat  # pylint: disable=import-error
+# from fast_scores.gen_cmat import gen_cmat  # pylint: disable=import-error
+
+from json_de2zh.gen_cmat import gen_cmat
 from logzero import logger
 
 # from fastlid import fastlid
