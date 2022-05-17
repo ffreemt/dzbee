@@ -44,11 +44,7 @@ def detect(text: str, set_languages: Optional[List[str]] = None) -> str:
         detect.lang_conf = langs
         # lang, conf = _[0]
     except UnknownLanguage:
-        if set_languages is None:
-            def_lang = "en"
-        else:
-            # def_lang = set_languages[-1]
-            def_lang = set_languages[0]
+        def_lang = "en" if set_languages is None else set_languages[0]
         logger.warning(
             " UnknownLanguage exception: probably snippet too short, setting to %s",
             def_lang,
@@ -64,18 +60,7 @@ def detect(text: str, set_languages: Optional[List[str]] = None) -> str:
     if set_languages is None:
         def_lang = langs[0][0]
     else:
-        def_lang = "en"
-
-        # pick the first in Detector(text).languages
-
-        # just to silence pyright
-        # set_languages_: List[str] = [""] if set_languages is None else set_languages
-
-        for elm in langs:
-            if elm[0] in set_languages:  # type: ignore
-                def_lang = elm[0]
-                break
-
+        def_lang = next((elm[0] for elm in langs if elm[0] in set_languages), "en")
     # set_languages is set
     if not isinstance(set_languages, (list, tuple)):
         logger.warning("set_languages (%s) ought to be a list/tuple")

@@ -54,43 +54,32 @@ def _version_callback(value: bool) -> None:
 
 
 @app.command()
-def main(
-    files: List[str] = typer.Argument(
+def main(files: List[str] = typer.Argument(
         ...,
         metavar="file1 [file2]...",
         help="files (absolute or relative paths) to be aligned; if only one file is specified, the -s flag must be used to signal it's an german/chinese mixed text file and needs to be separated.",
-    ),
-    eps: float = typer.Option(10, help="epsilon"),
-    min_samples: int = typer.Option(
-        6, help="eps, min-samples: " + esp_min_samples_expl
-    ),
-    need_sep: bool = typer.Option(
+    ), eps: float = typer.Option(10, help="epsilon"), min_samples: int = typer.Option(6, help=f"eps, min-samples: {esp_min_samples_expl}"), need_sep: bool = typer.Option(
         False,
         "--need-sep",
         "-s",
         is_flag=True,
         help="Separate input files that are mixed german and chinese text.",
-    ),
-    show_plot: bool = typer.Option(
+    ), show_plot: bool = typer.Option(
         False,
         "--show-plot",
         "-p",
         is_flag=True,
         help="Show heatmap and align trace plots in the default browser.",
-    ),
-    save_xlsx: bool = typer.Option(
+    ), save_xlsx: bool = typer.Option(
         True,
         help="Save xlsx.",
-    ),
-    save_tsv: bool = typer.Option(
+    ), save_tsv: bool = typer.Option(
         True,
         help="Save tsv.",
-    ),
-    save_csv: bool = typer.Option(
+    ), save_csv: bool = typer.Option(
         False,
         help="Save csv.",
-    ),
-    version: Optional[bool] = typer.Option(  # pylint: disable=(unused-argument
+    ), version: Optional[bool] = typer.Option(  # pylint: disable=(unused-argument
         None,
         "--version",
         "-v",
@@ -98,8 +87,7 @@ def main(
         help="Show version info and exit.",
         callback=_version_callback,
         is_eager=True,
-    ),
-):
+    )):
     """Align de-zh texts, fast.
 
     e.g.

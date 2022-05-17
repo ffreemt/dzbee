@@ -25,10 +25,10 @@ def common_prefix(strings: List[str]) -> str:
         return str(elm).strip(elm.suffix)
 
     strings = [str(_) for _ in strings if _]
-    c_prefix = "".join(
-        c[0] for c in takewhile(lambda x: all(x[0] == y for y in x), zip(*strings))
-    )
-    if c_prefix:
+    if c_prefix := "".join(
+        c[0]
+        for c in takewhile(lambda x: all(x[0] == y for y in x), zip(*strings))
+    ):
         return c_prefix.strip("_") + "_"  # NOQA
 
     # if emptry c_prefix

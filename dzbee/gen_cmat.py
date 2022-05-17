@@ -66,9 +66,7 @@ def gen_cmat(
     # text2a = globals()["process_" + lang2](text2)
 
     logger.debug("execute fast_scores")
-    _ = fast_scores(text1a, text2a, model=model)
-
-    return _
+    return fast_scores(text1a, text2a, model=model)
 
 
 _ = """

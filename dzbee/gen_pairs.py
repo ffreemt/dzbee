@@ -14,14 +14,12 @@ def gen_pairs(list1: List[str], list2: List[str], aset: List[str]) -> List[str]:
             logger.exception(e)
             raise
 
-        term = []
         try:
             iy = int(iy)  # note iy, not ix
             _ = list1[iy]
         except Exception:
             _ = ""
-        term.append(_)
-
+        term = [_]
         try:
             ix = int(ix)
             _ = list2[ix]
