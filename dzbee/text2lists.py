@@ -75,7 +75,14 @@ def text2lists(
 
     for elm in [_ for _ in text.splitlines() if _.strip()]:
         # lang, _ = fastlid(elm)
-        lang = detect(elm, set_languages)
+        # lang = detect(elm, set_languages)
+        try:
+            lang = detect(elm, set_languages)
+        except Exception:
+            # lang = "en"
+            lang = "de"
+            logger.warning("Cant detect: %s[20]... setting to %s", elm[:20], lang)
+
         if lang == lang0:
             res.append(elm)
         else:

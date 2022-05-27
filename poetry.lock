@@ -264,7 +264,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "json-de2zh"
-version = "0.1.1a0"
+version = "0.1.1"
 description = "pack_name descr"
 category = "main"
 optional = false
@@ -766,7 +766,7 @@ python-versions = ">=3.4"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8.3"
-content-hash = "83c476542e9c6e88dada29a71c412a312649c73cb062fd45a4f63fd08a196db4"
+content-hash = "4f9274364bf30bcb9306404d21ae3deb1e963f378c9d1249111d7d88b119d497"
 
 [metadata.files]
 about-time = [
@@ -887,8 +887,8 @@ joblib = [
     {file = "joblib-1.1.0.tar.gz", hash = "sha256:4158fcecd13733f8be669be0683b96ebdbbd38d23559f54dca7205aea1bf1e35"},
 ]
 json-de2zh = [
-    {file = "json_de2zh-0.1.1a0-py3-none-any.whl", hash = "sha256:ae20c3296912e8c9a013ed53ff361cc18e0f1524f2641fb86e2c4e65994dc199"},
-    {file = "json_de2zh-0.1.1a0.tar.gz", hash = "sha256:ff15c6418d52340d401dc69854c6d90b088aa5d535930c4d73ea4d0aca8161ca"},
+    {file = "json_de2zh-0.1.1-py3-none-any.whl", hash = "sha256:ba35f03c3235f048f1f7f2ef73ebe53659723f36f54c2651d27aa8632c7b1e22"},
+    {file = "json_de2zh-0.1.1.tar.gz", hash = "sha256:53b52b59402d1a38fba6afcfdf4c157f09f65dadc4f19a0b029d543074e83d98"},
 ]
 logzero = [
     {file = "logzero-1.7.0-py2.py3-none-any.whl", hash = "sha256:23eb1f717a2736f9ab91ca0d43160fd2c996ad49ae6bad34652d47aba908769d"},
