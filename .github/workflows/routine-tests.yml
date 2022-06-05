@@ -24,7 +24,7 @@ jobs:
       - name: Install packages
         run: |
           # poetry config virtualenvs.create false
-          # pip install pycld2 pyicu fasttest
+          # pip install pycld2 pyicu fasttest  # no series tests yet
           poetry install  # --no-dev
       - name: Run flake8
         run: |
